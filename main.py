@@ -15,6 +15,10 @@ def get_db():
     finally:
         db.close()
 
+@app.get('/')
+def func():
+    return "Hello"
+
 @app.post('/blog')
 def create(blog: schemas.Blog, db: Session = Depends(get_db)):
     new_blog  = models.Blog(title = blog.title, body = blog.body)
