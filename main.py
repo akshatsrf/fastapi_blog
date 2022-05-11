@@ -17,7 +17,7 @@ def get_db():
 
 @app.get('/')
 def func():
-    return "Add /docs in the URL"
+    return "Add /docs in the URL for Swagger UI"
 
 @app.post('/blog')
 def create(blog: schemas.Blog, db: Session = Depends(get_db)):
