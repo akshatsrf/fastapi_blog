@@ -2,7 +2,6 @@ from fastapi import FastAPI,Depends,status, Response
 import schemas,models
 from sqlalchemy.orm import Session
 from database import engine,SessionLocal
-from celery import Celery
 
 app = FastAPI()
 
