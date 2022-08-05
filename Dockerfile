@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir --upgrade -r /fastapi/requirements.txt
 COPY ./* /fastapi/
 
 # 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "blog_project.main:app", "--host", "0.0.0.0", "--port", "80"]
